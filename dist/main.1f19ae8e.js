@@ -123,13 +123,11 @@ var $lastList = $siteList.find('li.last');
 var x = localStorage.getItem('x');
 var xObject = JSON.parse(x);
 var hashMap = xObject || [{
-  logo: "X",
-  logoType: "text",
-  url: "https://www.xiedaimala.com"
-}, {
   logo: "G",
-  logoType: "image",
-  url: "https://www.game.163.com"
+  url: "https://www.google.com/"
+}, {
+  logo: "I",
+  url: "https://www.iconfont.cn/"
 }];
 
 var simplifyUrl = function simplifyUrl(url) {
@@ -209,7 +207,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61915" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63182" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -386,4 +384,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["C:/Users/admin/AppData/Local/Yarn/Data/global/node_modules/parcel/src/builtins/hmr-runtime.js","main.js"], null)
-//# sourceMappingURL=/main.1f19ae8e.js.map
+//# sourceMappingURL=main.1f19ae8e.js.map

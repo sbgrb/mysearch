@@ -137,7 +137,7 @@ var simplifyUrl = function simplifyUrl(url) {
 var render = function render() {
   $siteList.find('li:not(.last)').remove();
   hashMap.forEach(function (node, index) {
-    var $li = $(" \n                <li>\n                    <div class=\"site\">\n                    <div class=\"logo\">".concat(node.logo, "</div>\n                    <div class=\"link\">").concat(simplifyUrl(node.url), "</div>\n                    <div class=\"close\">\n                         <svg class=\"icon\">\n                         <use xlink:href=\"#icon-close\"></use>\n                          </svg>\n                     </div>\n                   </div>\n                </li>")).insertBefore($lastList);
+    var $li = $(" <li>\n                    <div class=\"site\">\n                    <div class=\"logo\">".concat(node.logo, "</div>\n                    <div class=\"link\">").concat(simplifyUrl(node.url), "</div>\n                    <div class=\"close\">\n                         <svg class=\"icon\">\n                         <use xlink:href=\"#icon-close\"></use>\n                          </svg>\n                     </div>\n                   </div>\n                </li>")).insertBefore($lastList);
     $li.on('click', function () {
       window.open(node.url);
     });
@@ -153,8 +153,8 @@ render();
 $('.addButton').on('click', function () {
   var url = window.prompt("\u8BF7\u8F93\u5165\u4F60\u9700\u8981\u6DFB\u52A0\u7684\u7F51\u5740");
 
-  if (url.indexOf('http' === 0)) {} else {
-    url = "https://" + url;
+  if (url.indexOf('http') !== 0) {
+    url = 'https://' + url;
   }
 
   hashMap.push({
@@ -177,4 +177,4 @@ window.onbeforeunload = function () {
 //     }
 // })
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.2687a853.js.map
+//# sourceMappingURL=main.662baf98.js.map
